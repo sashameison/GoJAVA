@@ -5,13 +5,23 @@ import java.util.Arrays;
 
 public class Films {
     private String name;
+    private int yearInWhichWasFilmed;
 
     public Films() {
 
     }
 
-    public Films(String name) {
+    public Films(String name, int yearInWhichWasFilmed) {
         this.name = name;
+        this.yearInWhichWasFilmed = yearInWhichWasFilmed;
+    }
+
+    public int getYearInWhichWasFilmed() {
+        return yearInWhichWasFilmed;
+    }
+
+    public void setYearInWhichWasFilmed(int yearInWhichWasFilmed) {
+        this.yearInWhichWasFilmed = yearInWhichWasFilmed;
     }
 
     public String getName() {
@@ -22,12 +32,12 @@ public class Films {
         this.name = name;
     }
 
-    @Override
+   @Override
     public String toString() {
-        return "Film{" +
-                "name='" + name + '\'' +
-                '}';
+        return  "Name of film: " + name +
+                ", year: " + yearInWhichWasFilmed;
     }
+
     public void next1(){
         ArrayList<String> actors = new ArrayList<>(Arrays.asList("Brody"));
         System.out.println("       List of my favourite names        ");

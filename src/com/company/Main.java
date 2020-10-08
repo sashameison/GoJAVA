@@ -9,14 +9,15 @@ public class Main extends Films{
         Films films = new Films();
         //Вызываем наш метод next()
         films.next1();
+        films.next();
         /*Реализаия с помощью создания обьектов для каждого
         фильма не совсем удобно!
         */
-        Films first_films = new Films("Spider-Man");
-        Films second_film = new Films("Matrix");
-        Films third_film = new Films("Avatar");
-        Films forth_film = new Films("Inception");
-        Films fifth_film = new Films("PiratesOfCaribbean");
+        Films first_films = new Films("Spider-Man", 2004);
+        Films second_film = new Films("Matrix", 1999);
+        Films third_film = new Films("Avatar", 2008);
+        Films forth_film = new Films("Inception", 2010);
+        Films fifth_film = new Films("PiratesOfCaribbean", 2001);
 
         list.add(first_films);
         list.add(second_film);
@@ -24,11 +25,10 @@ public class Main extends Films{
         list.add(forth_film);
         list.add(fifth_film);
 
-
-        System.out.println('\n' + "       List of my favourite films         ");
-        for (Films x: list
+        System.out.println('\n');
+        for (Films y: list
              ) {
-            System.out.println(x);
+            System.out.println(y);
         }
         System.out.println('\n' + "Size of our list is :" + list.size());
         System.out.println("\n");
