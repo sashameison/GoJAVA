@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Films {
@@ -9,7 +10,6 @@ public class Films {
     private int yearInWhichWasFilmed;
 
     public Films() {
-
 
     }
 
@@ -47,7 +47,6 @@ public class Films {
         }
         System.out.println("Size: " + actors.size());
 
-
     }
     public void info(){
         List<Films> list = new ArrayList<>();
@@ -70,5 +69,18 @@ public class Films {
         }
         System.out.println('\n' + "Size of our list is :" + list.size());
         System.out.println("\n");
+    }
+    public void info1(){
+        System.out.println("The result pf our victorina");
+        List<String> some_list = new LinkedList<>(Arrays.asList("John", "Max", "Sasha", "Nasty"));
+        for (String x : some_list
+        ) {
+            if (x.equals("John")) {
+                System.out.println("Congratulations " + x + " You won 1 million dollars");
+            } else {
+                System.out.println("Unfortunately " + x + " You did not win 1 million");
+            }
+        }
+        System.out.println('\n');
     }
 }

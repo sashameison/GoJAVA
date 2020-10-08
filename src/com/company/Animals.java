@@ -11,7 +11,7 @@ public class Animals extends Films{
         this.breed = breed;
         this.age = age;
         this.name = name;
-        info();
+
     }
 
     public Animals() {
@@ -27,10 +27,10 @@ public class Animals extends Films{
                 ;
     }
     public void info(){
-
+        System.out.println("All information about out animals");
         ArrayList<Animals> some_animal = new ArrayList<>();
 
-        Animals first = new Animals("Boba", 12, "Sasha");
+        Animals first = new Animals("Biba", 12, "Sasha");
         Animals second = new Animals("Chika", 10, "Masha");
         Animals third = new Animals("Aba", 8, "Artem");
         some_animal.add(first);
@@ -42,7 +42,7 @@ public class Animals extends Films{
             System.out.println(x);
         }
         System.out.println(some_animal.size());
-        System.out.println(some_animal.isEmpty());
+
 
     }
 }
