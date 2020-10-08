@@ -1,9 +1,14 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+
 public class Main {
     public static void main(String[] args) {
-        for (int i = 0; i < 4; i++) {
-            System.out.println("Hello world");
+        LinkedList<String> some_list= new LinkedList<String>(Arrays.asList("John", "Max"));
+            System.out.println(some_list);
+
         }
     }
-}
+
