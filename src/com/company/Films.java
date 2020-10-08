@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Films {
     private String name;
@@ -9,27 +10,13 @@ public class Films {
 
     public Films() {
 
+
     }
 
     public Films(String name, int yearInWhichWasFilmed) {
         this.name = name;
         this.yearInWhichWasFilmed = yearInWhichWasFilmed;
-    }
 
-    public int getYearInWhichWasFilmed() {
-        return yearInWhichWasFilmed;
-    }
-
-    public void setYearInWhichWasFilmed(int yearInWhichWasFilmed) {
-        this.yearInWhichWasFilmed = yearInWhichWasFilmed;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
    @Override
@@ -39,7 +26,7 @@ public class Films {
     }
 
     public void next1(){
-        ArrayList<String> actors = new ArrayList<>(Arrays.asList("Brody"));
+        ArrayList<String> actors = new ArrayList<>(Arrays.asList("Matt", "Johny", "Alice"));
         System.out.println("       List of my favourite names        ");
         for (String x: actors
              ) {
@@ -62,5 +49,26 @@ public class Films {
 
 
     }
+    public void info(){
+        List<Films> list = new ArrayList<>();
+        Films first_films = new Films("Spider-Man", 2004);
+        Films second_film = new Films("Matrix", 1999);
+        Films third_film = new Films("Avatar", 2008);
+        Films forth_film = new Films("Inception", 2010);
+        Films fifth_film = new Films("PiratesOfCaribbean", 2001);
 
+        list.add(first_films);
+        list.add(second_film);
+        list.add(third_film);
+        list.add(forth_film);
+        list.add(fifth_film);
+
+        System.out.println('\n');
+        for (Films y: list
+        ) {
+            System.out.println(y);
+        }
+        System.out.println('\n' + "Size of our list is :" + list.size());
+        System.out.println("\n");
+    }
 }
