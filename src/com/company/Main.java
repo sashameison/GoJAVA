@@ -2,10 +2,16 @@ package com.company;
 
 import java.util.*;
 
-public class Main {
+public class Main extends Films{
     public static void main(String[] args) {
         List<Films> list = new ArrayList<Films>();
-
+        //В конструкторе класса Films можно поместить метод void который уже содержит коллекцию с помещенными в него элементами!
+        Films films = new Films();
+        //Вызываем наш метод next()
+        films.next1();
+        /*Реализаия с помощью создания обьектов для каждого
+        фильма не совсем удобно!
+        */
         Films first_films = new Films("Spider-Man");
         Films second_film = new Films("Matrix");
         Films third_film = new Films("Avatar");
@@ -18,11 +24,13 @@ public class Main {
         list.add(forth_film);
         list.add(fifth_film);
 
-        System.out.println("       List of my favourite films         ");
+
+        System.out.println('\n' + "       List of my favourite films         ");
         for (Films x: list
              ) {
             System.out.println(x);
         }
+        System.out.println('\n' + "Size of our list is :" + list.size());
         System.out.println("\n");
 
         List<String> some_list = new LinkedList<String>(Arrays.asList("John", "Max", "Sasha", "Nasty"));
