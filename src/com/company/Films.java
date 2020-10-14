@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Films {
+public class Films implements InfoAboutFilms {
     private String name;
     private int yearInWhichWasFilmed;
 
@@ -16,7 +16,6 @@ public class Films {
     public Films(String name, int yearInWhichWasFilmed) {
         this.name = name;
         this.yearInWhichWasFilmed = yearInWhichWasFilmed;
-
     }
 
    @Override
@@ -34,7 +33,9 @@ public class Films {
         }
         System.out.println("Our size of ArrayList: " + actors.size());
     }
-    public  void next() {
+
+
+    public void next() {
         ArrayList<String> actors = new ArrayList<>();
         actors.add("Leonardo Wilhelm DiCaprio ");
         actors.add("Vin Diesel");
@@ -48,7 +49,12 @@ public class Films {
         System.out.println("Size: " + actors.size());
 
     }
-    public void info(){
+
+
+
+
+    @Override
+    public void InfoAboutFilms(){
         List<Films> list = new ArrayList<>();
         Films first_films = new Films("Spider-Man", 2004);
         Films second_film = new Films("Matrix", 1999);
@@ -70,7 +76,10 @@ public class Films {
         System.out.println('\n' + "Size of our list is :" + list.size());
         System.out.println("\n");
     }
-    public void info1(){
+
+    @Override
+
+    public void Info1(){
         System.out.println("The result pf our victorina");
         List<String> some_list = new LinkedList<>(Arrays.asList("John", "Max", "Sasha", "Nasty"));
         for (String x : some_list

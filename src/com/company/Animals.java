@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 
-public class Animals extends Films{
+public class Animals extends Films implements InfoAboutAnimals{
     private String breed;
     private int age;
     private String name;
@@ -26,8 +26,9 @@ public class Animals extends Films{
                 ", name of animal: " + name
                 ;
     }
-    public void info(){
-        System.out.println("All information about out animals");
+    @Override
+    public void InfoAboutAnimals1(){
+        System.out.println("All information about our animals");
         ArrayList<Animals> some_animal = new ArrayList<>();
 
         Animals first = new Animals("Biba", 12, "Sasha");
@@ -45,4 +46,5 @@ public class Animals extends Films{
 
 
     }
+
 }
